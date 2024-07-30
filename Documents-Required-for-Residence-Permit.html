@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residence Permit Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .buttons {
+            margin: 20px 0;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Documents Required for Residence Permit</h2>
+<h2>passport - Acceptance - enrollment - payment -NIF - bank account -photos - accommodation - <mark>saudi criminal </mark>  -criminal - portuguese -NIF       </h2>
+<h2> PAEP NBPA CCN        </h2>
+<table>
+    <thead>
+        <tr>
+            <th>Portuguese</th>
+            <th>English</th>
+            <th>Arabic</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Passaporte válido com carimbo de entrada legal em território português</td>
+            <td>Valid passport with a legal entry stamp in Portuguese territory</td>
+            <td>جواز سفر صالح مع ختم دخول قانوني إلى الأراضي البرتغالية</td>
+        </tr>
+        <tr>
+            <td>Carta de Aceitação em uma instituição do Ensino Superior</td>
+            <td>Acceptance Letter from a Higher Education institution</td>
+            <td>خطاب قبول من مؤسسة تعليم عالي</td>
+        </tr>
+        <tr>
+            <td>Comprovação de matrícula efetuada na instituição</td>
+            <td>Proof of enrollment in the institution</td>
+            <td>إثبات التسجيل في المؤسسة</td>
+        </tr>
+        <tr>
+            <td>Comprovação de pagamento das propinas</td>
+            <td>Proof of tuition payment</td>
+            <td>إثبات دفع الرسوم الدراسية</td>
+        </tr>
+        <tr>
+            <td>NIF português</td>
+            <td>Portuguese NIF</td>
+            <td>رقم التعريف الضريبي البرتغالي (NIF)</td>
+        </tr>
+        <tr>
+            <td>Comprovação de que possui recursos suficientes</td>
+            <td>Proof of sufficient resources</td>
+            <td>إثبات وجود موارد كافية</td>
+        </tr>
+        <tr>
+            <td>Pedido apresentado presencialmente</td>
+            <td>Application submitted in person</td>
+            <td>طلب مقدم شخصيًا</td>
+        </tr>
+        <tr>
+            <td>Duas fotografias iguais, tipo passe</td>
+            <td>Two identical passport-sized photos</td>
+            <td>صورتان متطابقتان بحجم جواز السفر</td>
+        </tr>
+        <tr>
+            <td>Passaporte válido (6 meses antes de vencer)</td>
+            <td>Valid passport (6 months before expiration)</td>
+            <td>جواز سفر صالح (6 أشهر قبل انتهاء الصلاحية)</td>
+        </tr>
+        <tr>
+            <td>Comprovativo de alojamento em Portugal</td>
+            <td>Proof of accommodation in Portugal</td>
+            <td>إثبات الإقامة في البرتغال</td>
+        </tr>
+        <tr>
+            <td>Certidão de Antecedentes Criminais do Saudi</td>
+            <td><mark>Criminal Record Certificate from saudi</mark></td>
+            <td>شهادة السجل الجنائي من السعودية</td>
+        </tr>
+        <tr>
+            <td>Requerimento para consulta do registro criminal português</td>
+            <td>Request for consultation of the Portuguese criminal record</td>
+            <td>طلب للاستعلام عن السجل الجنائي البرتغالي</td>
+        </tr>
+        <tr>
+            <td>Apresentar o CDAM / PB-4</td>
+            <td>Presentation of the CDAM / PB-4</td>
+            <td>تقديم CDAM / PB-4</td>
+        </tr>
+        <tr>
+            <td>NIF  </td>
+            <td>NIF  </td>
+            <td>رقم التعريف الضريبي البرتغالي (NIF)</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="buttons">
+    <button class="button" onclick="copyTable()">Copy</button>
+    <button class="button" onclick="printTable()">Print</button>
+</div>
+
+<script>
+    function copyTable() {
+        const table = document.querySelector('table');
+        const range = document.createRange();
+        range.selectNode(table);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        document.execCommand('copy');
+        alert('Table copied to clipboard!');
+    }
+
+    function printTable() {
+        const printWindow = window.open('', '', 'height=400,width=800');
+        printWindow.document.write('<html><head><title>Print Table</title>');
+        printWindow.document.write('</head><body >');
+        printWindow.document.write(document.querySelector('table').outerHTML);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    }
+</script>
+
+</body>
+</html>
